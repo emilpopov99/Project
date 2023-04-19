@@ -1,0 +1,200 @@
+.masthead {
+  height: 500px;
+  width: auto;
+  background-image: url('/img/173_BANNER-CATEGORIE-FRAGRANCE-1170X500PX.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1510px) and (min-height: 900px) {
+  .masthead {
+    height: 400px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 1500px) and (max-height: 1350px) {
+  .masthead {
+    height: 250px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 700px) and (max-height: 920px) {
+  .masthead {
+    height: 150px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (min-width: 1020px) and (max-width: 1030px) and (min-height: 590px) and (max-height: 610px) {
+  .masthead {
+    height: 400px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (min-width: 530px) and (max-width: 550px) and (min-height: 710px) and (max-height: 730px) {
+  .masthead {
+    height: 250px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .custom-newsletter {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.menfragrance-image {
+  background-image: url("/img/PACO-RABANNE-MEN-FRAG-HEADER-DESKTOP.jpg");
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f1f1f1;
+  position: relative;
+  filter: blur(8px);
+}
+
+
+.menfragrance-text {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  text-shadow: rgb(0, 0, 0);
+  position: relative;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+.womenfragrance-image {
+  background-image: url("/img/15-Most-Complimented-Womens-Perfumes-and-Fragrances-F3.jpg");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.womenfragrance-text {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  text-shadow: rgb(0, 0, 0);
+  position: relative;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+.unisexfragrance-image {
+  background-image: url("/img/rs_1024x759-210916144540-1024-Gender-Neutral-Fragrances-mp.jpg");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.unisexfragrance-text {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  text-shadow: rgb(0, 0, 0);
+  position: relative;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.btn-custom {
+  border: 1px solid black;
+}
+
+.test-class {
+  height: auto;
+  max-height: 550px;
+
+}
+
+.test-class img {
+  width: 100%;
+  max-width: 450px;
+}
+
+
+.discount-image {
+  background-image: url("/img/hmHalf-Fragrance50Percent.jpg");
+  height: 500px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-image-wrapper {
+  background: rgb(255, 163, 150);
+  background: linear-gradient(0deg, rgba(255, 163, 150, 1) 0%, rgba(254, 226, 225, 1) 100%);
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+.span {
+  color: black;
+}

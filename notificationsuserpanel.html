@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyParfum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <section class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-cntrols="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="discounts.html">Discounts</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Fragrances
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item custom-outline" href="menfragrance.html">Men's
+                                        Fragrances</a></li>
+                                <li><a class="dropdown-item custom-outline" href="womenfragrance.html">Women's
+                                        Fragrances</a></li>
+                                <li><a class="dropdown-item custom-outline" href="unisexfragrance.html">Unisex
+                                        Fragrances</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </form>
+                    <div class="dropdown">
+                        <a class="dropdown-hidden-toggle ms-2" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="img/vecteezy_profile-icon-design-vector_5544718.jpg" height="30"
+                                class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item custom-outline" href="userpanel.html">User Profile</a></li>
+                            <li><a class="dropdown-item custom-outline" href="adminpanel.html">Admin Profile</a></li>
+                            <li><a class="dropdown-item custom-outline" href="">Settings</a></li>
+                            <li><a class="dropdown-item custom-outline" href="login.html">Login</a></li>
+                            <li><a class="dropdown-item custom-outline" href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-xl px-4 mt-4">
+            <!-- Account page navigation-->
+            <nav class="nav nav-borders">
+                <a class="nav-link  ms-0 text-dark" href="userpanel.html">Profile</a>
+                <a class="nav-link text-dark" href="billinguserpanel.html">Billing</a>
+                <a class="nav-link text-dark" href="securityuserpanel.html">Security</a>
+                <a class="nav-link active  text-dark" href="notificationsuserpanel.html">Notifications</a>
+            </nav>
+            <hr class="mt-0 mb-4">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Email notifications preferences card-->
+                    <div class="card card-header-actions mb-4">
+                        <div class="card-header">
+                            Email Notifications
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
+                                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <!-- Form Group (default email)-->
+                                <div class="mb-3">
+                                    <label class="small mb-1" for="inputNotificationEmail">Default notification
+                                        email</label>
+                                    <input class="form-control" id="inputNotificationEmail" type="email" value=""
+                                        disabled="">
+                                </div>
+                                <!-- Form Group (email updates checkboxes)-->
+                                <div class="mb-0">
+                                    <label class="small mb-2">Choose which types of email updates you receive</label>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" id="checkAccountChanges" type="checkbox"
+                                            checked="">
+                                        <label class="form-check-label" for="checkAccountChanges">Changes made to your
+                                            account</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" id="checkProductUpdates" type="checkbox"
+                                            checked="">
+                                        <label class="form-check-label" for="checkProductUpdates">Product updates for
+                                            products you've purchased or starred</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" id="checkProductNew" type="checkbox" checked="">
+                                        <label class="form-check-label" for="checkProductNew">Information on new
+                                            products and services</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" id="checkPromotional" type="checkbox">
+                                        <label class="form-check-label" for="checkPromotional">Marketing and promotional
+                                            offers</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="checkSecurity" type="checkbox" checked=""
+                                            disabled="">
+                                        <label class="form-check-label" for="checkSecurity">Security alerts</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <!-- Notifications preferences card-->
+                    <div class="card">
+                        <div class="card-header">Notification Preferences</div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" id="checkAutoProduct" type="checkbox">
+                                    <label class="form-check-label" for="checkAutoProduct">Automatically subscribe to
+                                        new product notifications</label>
+                                </div>
+                                <!-- Submit button-->
+                                <button class="btn btn-danger-soft text-danger">Unsubscribe from all
+                                    notifications</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-xl col-lg col-md col-sm">
+                        <div class="">
+                            <img src="/img/logo.png" class="col-md-8 img-fluid">
+                        </div>
+                    </div>
+                    <div class="custom-newsletter col-xl col-lg col-md col-sm d-flex justify-content-end text-center">
+                        <div class="text-center">
+                            <h4>Information</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="index.html" class="text-decoration-none">Home</a>
+                                </li>
+                                <li>
+                                    <a href="aboutus.html" class="text-decoration-none">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none">Service</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl col-lg col-md col-sm d-flex justify-content-end text-center">
+                        <div>
+                            <h4>Newsletter</h4>
+                            <div>
+                                <label for="Newsletter" class="form-label">Subscribe To Our Newsletter</label>
+                                <input type="text" class="form-control" Placeholder="Enter Your Email">
+                                <button class="btn btn-danger mt-3">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="copyright">
+                        <p>Developed and maintained by <a href="#" target="_blank">MyParfum</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript"></script>
+</body>
+
+</html>

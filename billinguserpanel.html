@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyParfum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <section class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-cntrols="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="discounts.html">Discounts</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Fragrances
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item custom-outline" href="menfragrance.html">Men's
+                                        Fragrances</a></li>
+                                <li><a class="dropdown-item custom-outline" href="womenfragrance.html">Women's
+                                        Fragrances</a></li>
+                                <li><a class="dropdown-item custom-outline" href="unisexfragrance.html">Unisex
+                                        Fragrances</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </form>
+                    <div class="dropdown">
+                        <a class="dropdown-hidden-toggle ms-2" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="img/vecteezy_profile-icon-design-vector_5544718.jpg" height="30"
+                                class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item custom-outline" href="userpanel.html">User Profile</a></li>
+                            <li><a class="dropdown-item custom-outline" href="adminpanel.html">Admin Profile</a></li>
+                            <li><a class="dropdown-item custom-outline" href="">Settings</a></li>
+                            <li><a class="dropdown-item custom-outline" href="login.html">Login</a></li>
+                            <li><a class="dropdown-item custom-outline" href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+            integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+
+        <div class="container-xl px-4 mt-4">
+            <nav class="nav nav-borders">
+                <a class="nav-link ms-0 text-dark" href="userpanel.html">Profile</a>
+                <a class="nav-link active text-dark" href="billinguserpanel.html">Billing</a>
+                <a class="nav-link text-dark" href="securityuserpanel.html">Security</a>
+                <a class="nav-link text-dark" href="notificationsuserpanel.html">Notifications</a>
+            </nav>
+            <div class="row">
+            </div>
+            <div class="card card-header-actions mb-4">
+                <div class="card-header">
+                    Payment Methods
+                    <button class="btn btn-sm btn-dark" type="button">Add Payment Method</button>
+                </div>
+                <div class="card-body px-0">
+                    <div class="d-flex align-items-center justify-content-between px-4">
+                        <div class="d-flex align-items-center">
+                            <i class="fab fa-cc-visa fa-2x cc-color-visa"></i>
+                            <div class="ms-4">
+                                <div class="small">Visa ending in 1234</div>
+                                <div class="text-xs text-muted">Expires 04/2024</div>
+                            </div>
+                        </div>
+                        <div class="ms-4 small">
+                            <div class="badge bg-light text-dark me-3">Default</div>
+                            <a href="#!">Edit</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex align-items-center justify-content-between px-4">
+                        <div class="d-flex align-items-center">
+                            <i class="fab fa-cc-mastercard fa-2x cc-color-mastercard"></i>
+                            <div class="ms-4">
+                                <div class="small">Mastercard ending in 5678</div>
+                                <div class="text-xs text-muted">Expires 05/2022</div>
+                            </div>
+                        </div>
+                        <div class="ms-4 small">
+                            <a class="text-muted me-3" href="#!">Make Default</a>
+                            <a href="#!">Edit</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex align-items-center justify-content-between px-4">
+                        <div class="d-flex align-items-center">
+                            <i class="fab fa-cc-amex fa-2x cc-color-amex"></i>
+                            <div class="ms-4">
+                                <div class="small">American Express ending in 9012</div>
+                                <div class="text-xs text-muted">Expires 01/2026</div>
+                            </div>
+                        </div>
+                        <div class="ms-4 small">
+                            <a class="text-muted me-3" href="#!">Make Default</a>
+                            <a href="#!">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header">Order History</div>
+                <div class="card-body p-0">
+                    <div class="table-responsive table-billing-history">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="border-gray-200" scope="col">Order ID</th>
+                                    <th class="border-gray-200" scope="col">Date</th>
+                                    <th class="border-gray-200" scope="col">Amount</th>
+                                    <th class="border-gray-200" scope="col">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#39201</td>
+                                    <td>06/02/2023</td>
+                                    <td>69.99 Lv</td>
+                                    <td><span class="badge bg-light text-dark">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#38594</td>
+                                    <td>05/15/2022</td>
+                                    <td>59.99 Lv</td>
+                                    <td><span class="badge bg-success">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#38223</td>
+                                    <td>04/15/2022</td>
+                                    <td>39.99 Lv</td>
+                                    <td><span class="badge bg-success">Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#38125</td>
+                                    <td>03/15/2021</td>
+                                    <td>49.99 Lv</td>
+                                    <td><span class="badge bg-success">Delivered</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-xl col-lg col-md col-sm">
+                        <div class="">
+                            <img src="/img/logo.png" class="col-md-8 img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-xl col-lg col-md col-sm d-flex justify-content-center">
+                        <div class="text-center">
+                            <h4>Information</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="index.html" class="text-decoration-none">Home</a>
+                                </li>
+                                <li>
+                                    <a href="aboutus.html" class="text-decoration-none">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none">Service</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-decoration-none">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="custom-newsletter col-xl col-lg col-md col-sm d-flex justify-content-end text-center">
+                        <div>
+                            <h4>Newsletter</h4>
+                            <div>
+                                <label for="Newsletter" class="form-label">Subscribe To Our Newsletter</label>
+                                <input type="text" class="form-control" Placeholder="Enter Your Email">
+                                <button class="btn btn-danger mt-3">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="copyright">
+                        <p>Developed and maintained by <a href="#" target="_blank">MyParfum</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript"></script>
+</body>
+
+</html>
