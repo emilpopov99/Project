@@ -34,21 +34,9 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.products = require('./product.model.js')(sequelize, DataTypes)
-db.users = require('./user.model.js')(sequelize, Sequelize)
+db.users = require('./user.model.js')(sequelize, DataTypes)
 db.orders = require('./order.model.js')(sequelize, DataTypes)
 db.order_quantity = require('./order.quantity.model.js')(sequelize, DataTypes)
-db.roles = require("../models/role.model.js")(sequelize, Sequelize);
-
-db.roles.belongsToMany(db.users, {
-    through: "user_roles",
-    foreignKey: "roleId",
-    otherKey: "userId"
-});
-db.users.belongsToMany(db.roles, {
-    through: "user_roles",
-    foreignKey: "userId",
-    otherKey: "roleId"
-});
 
 
 db.order_quantity.belongsTo(db.orders)
@@ -63,7 +51,6 @@ db.sequelize.sync({ force: false })
         console.log('yes re-sync done!')
     })
 
-db.ROLES = ["User", "Admin"];
 
 
 
