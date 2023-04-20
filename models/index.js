@@ -51,6 +51,7 @@ db.sequelize.sync({ force: false })
         console.log('yes re-sync done!')
     })
 
+db.ROLES = ["User", "Admin"];
 
 
 
