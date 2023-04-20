@@ -18,12 +18,12 @@ const createUser = (req, res) => {
 
   // Create a user
   const user = {
-    role: req.body.role,
     firstName: req.body.firstName,
     middleName: req.body.middleName,
     lastName: req.body.lastName,
     email: req.body.email,
-    address: req.body.address
+    address: req.body.address,
+    password: req.body.password
   };
 
   // Save user in the database
@@ -128,7 +128,17 @@ const deleteUser = (req, res) => {
 };
 
 
-// Connect one to many relation User and Orders
+exports.allAccess = (req, res) => {
+  res.status(200).send("Public Content.");
+};
+
+exports.userBoard = (req, res) => {
+  res.status(200).send("User Content.");
+};
+
+exports.adminBoard = (req, res) => {
+  res.status(200).send("Admin Content.");
+};
 
 
 module.exports = {
