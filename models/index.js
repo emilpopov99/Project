@@ -34,25 +34,45 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.products = require('./product.model.js')(sequelize, DataTypes)
-db.users = require('./user.model.js')(sequelize, DataTypes)
 db.orders = require('./order.model.js')(sequelize, DataTypes)
-db.order_quantity = require('./order.quantity.model.js')(sequelize, DataTypes)
+db.order_quantities = require('./order.quantity.model.js')(sequelize, DataTypes)
+db.users = require("./user.model.js")(sequelize, Sequelize);
+db.roles = require("./role.model.js")(sequelize, Sequelize);
 
-
-db.order_quantity.belongsTo(db.orders)
-db.order_quantity.belongsTo(db.products);
 db.orders.belongsTo(db.users)
 db.users.hasMany(db.orders)
 
+db.users.belongsToMany(db.roles, {
+    through: "user_roles",
+    foreignKey: "userID",
+    otherKey: "roleID"
+});
+
+db.roles.belongsToMany(db.users, {
+    through: "user_roles",
+    foreignKey: "roleID",
+    otherKey: "userID"
+});
+
+db.orders.belongsToMany(db.products, {
+    through: "order_quantity",
+    foreignKey: "orderID",
+    otherKey: "productID"
+});
+
+db.products.belongsToMany(db.orders, {
+    through: "order_quantity",
+    foreignKey: "productID",
+    otherKey: "orderID"
+});
+
+db.ROLES = ["User", "Admin"];
 
 
 db.sequelize.sync({ force: false })
     .then(() => {
         console.log('yes re-sync done!')
     })
-
-
-
 
 
 module.exports = db
