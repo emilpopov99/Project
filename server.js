@@ -27,8 +27,10 @@ function initial() {
 }
 
 // routers
-const router = require('./routes/user.routes.js')
+const router = require('./routes/main.routes.js')
 app.use('/api', router)
+require('./routes/auth.routes')(app)
+require('./routes/user.routes')(app)
 
 
 //port
@@ -43,3 +45,4 @@ const PORT = process.env.PORT || 8080
 app.listen(PORT, () => {
     console.log(`server is running on port ${PORT}`)
 })
+

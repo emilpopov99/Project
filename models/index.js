@@ -66,13 +66,6 @@ db.products.belongsToMany(db.orders, {
     otherKey: "orderID"
 });
 
-db.ROLES = ["User", "Admin"];
-
-
-db.sequelize.sync({ force: false })
-    .then(() => {
-        console.log('yes re-sync done!')
-    })
-
+db.ROLES = "User", "Admin";
 
 module.exports = db

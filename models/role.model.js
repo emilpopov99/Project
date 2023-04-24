@@ -4,7 +4,7 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.INTEGER,
         primaryKey: true
       },
-      roleName: {
+      name: {
         type: Sequelize.STRING
       }
     });

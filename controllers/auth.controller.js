@@ -14,22 +14,22 @@ exports.signup = (req, res) => {
     email: req.body.email,
     password: bcrypt.hashSync(req.body.password, 8)
   })
-    .then(users => {
-      if (req.body.roles) {
+    .then(user => {
+      if (req.body.role) {
         Role.findAll({
           where: {
             name: {
               [Op.or]: req.body.role
             }
           }
-        }).then(roles => {
-          users.setRoles(roles).then(() => {
+        }).then(role => {
+          user.setRoles(role).then(() => {
             res.send({ message: "User was registered successfully!" });
           });
         });
       } else {
         // user role = 1
-        users.setRoles([1]).then(() => {
+        user.setRoles([1]).then(() => {
           res.send({ message: "User was registered successfully!" });
         });
       }
@@ -45,14 +45,14 @@ exports.signin = (req, res) => {
       email: req.body.email
     }
   })
-    .then(users => {
-      if (!users) {
+    .then(user => {
+      if (!user) {
         return res.status(404).send({ message: "User Not found." });
       }
 
       var passwordIsValid = bcrypt.compareSync(
         req.body.password,
-        users.password
+        user.password
       );
 
       if (!passwordIsValid) {
@@ -62,19 +62,19 @@ exports.signin = (req, res) => {
         });
       }
 
-      var token = jwt.sign({ id: users.id }, config.secret, {
+      var token = jwt.sign({ id: user.id }, config.secret, {
         expiresIn: 86400 // 24 hours
       });
 
       var authorities = [];
-      users.getRoles().then(roles => {
-        for (let i = 0; i < roles.length; i++) {
-          authorities.push("ROLE_" + roles[i].name.toUpperCase());
+      user.getRoles().then(role => {
+        for (let i = 0; i < role.length; i++) {
+          authorities.push("ROLE_" + role[i].name.toUpperCase());
         }
         res.status(200).send({
-          id: users.id,
-          email: users.email,
-          roles: authorities,
+          id: user.id,
+          email: user.email,
+          role: authorities,
           accessToken: token
         });
       });
