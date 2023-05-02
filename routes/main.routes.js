@@ -2,6 +2,7 @@
 const userController = require('../controllers/user.controller.js')
 const orderController = require('../controllers/order.controller.js')
 const productController = require('../controllers/product.controller.js')
+const roleController = require('../controllers/role.controller.js')
 
 
 // router
@@ -9,7 +10,6 @@ const router = require('express').Router()
 
 
 // User Controller
-router.post('/users/createUser', userController.createUser)
 router.get('/users/allUsers', userController.getAllUsers)
 router.get('/users/:id', userController.getUser)
 router.put('/users/updateUser/:id', userController.updateUser)
@@ -19,11 +19,13 @@ router.delete('/users/deleteUser/:id', userController.deleteUser)
 
 // Order Controller
 router.post('/users/createOrder', orderController.createOrder)
+router.put('/orders/updateOrder/:id', orderController.updateOrder)
 router.get('/orders/getOrder/:id', orderController.getOrder)
 router.get('/orders/getUserInfo/:id', orderController.getUserInfo)
 router.get('/orders/allOrders', orderController.getAllOrders)
 
-// Order Quantity Controller
+// Role Controller
+router.post('/createRole', roleController.createRole)
 
 
 //Product Controller

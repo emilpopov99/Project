@@ -33,39 +33,36 @@ const db = {}
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.products = require('./product.model.js')(sequelize, DataTypes)
-db.orders = require('./order.model.js')(sequelize, DataTypes)
-db.order_quantities = require('./order.quantity.model.js')(sequelize, DataTypes)
+db.products = require('./product.model.js')(sequelize, Sequelize)
+db.orders = require('./order.model.js')(sequelize, Sequelize)
 db.users = require("./user.model.js")(sequelize, Sequelize);
 db.roles = require("./role.model.js")(sequelize, Sequelize);
 
+db.orders.belongsTo(db.products)
 db.orders.belongsTo(db.users)
 db.users.hasMany(db.orders)
 
+
 db.users.belongsToMany(db.roles, {
     through: "user_roles",
-    foreignKey: "userID",
-    otherKey: "roleID"
+    foreignKey: "userId",
+    otherKey: "roleId"
 });
 
 db.roles.belongsToMany(db.users, {
     through: "user_roles",
-    foreignKey: "roleID",
-    otherKey: "userID"
+    foreignKey: "roleId",
+    otherKey: "userId"
 });
 
-db.orders.belongsToMany(db.products, {
-    through: "order_quantity",
-    foreignKey: "orderID",
-    otherKey: "productID"
-});
+// db.orders.belongsToMany(db.products, {
+//     foreignKey: "orderID",
+// });
 
-db.products.belongsToMany(db.orders, {
-    through: "order_quantity",
-    foreignKey: "productID",
-    otherKey: "orderID"
-});
+// db.products.belongsToMany(db.orders, {
+//     foreignKey: "productID",
+// });
 
-db.ROLES = "User", "Admin";
+db.ROLES = ["admin", "user"];
 
 module.exports = db

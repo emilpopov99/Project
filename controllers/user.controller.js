@@ -7,38 +7,6 @@ const User = db.users
 
 // main work
 
-const createUser = (req, res) => {
-  // Validate request
-  if (!req.body.role) {
-    res.status(400).send({
-      message: "Content can not be empty!"
-    });
-    return;
-  }
-
-  // Create a user
-  const user = {
-    firstName: req.body.firstName,
-    middleName: req.body.middleName,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    address: req.body.address,
-    password: req.body.password
-  };
-
-  // Save user in the database
-  User.create(user)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while creating the user."
-      });
-    });
-};
-
 // Retrieve all users from the database.
 const getAllUsers = (req, res) => {
   const name = req.query.name;
@@ -129,7 +97,6 @@ const deleteUser = (req, res) => {
 
 
 module.exports = {
-  createUser,
   getAllUsers,
   getUser,
   updateUser,

@@ -11,19 +11,23 @@ var bcrypt = require("bcryptjs");
 exports.signup = (req, res) => {
   // Save User to Database
   User.create({
+    firstName: req.body.firstName,
+    middleName: req.body.middleName,
+    lastName: req.body.lastName,
+    address: req.body.address,
     email: req.body.email,
     password: bcrypt.hashSync(req.body.password, 8)
   })
     .then(user => {
-      if (req.body.role) {
+      if (req.body.roles) {
         Role.findAll({
           where: {
-            name: {
-              [Op.or]: req.body.role
+            role: {
+              [Op.or]: req.body.roles
             }
           }
-        }).then(role => {
-          user.setRoles(role).then(() => {
+        }).then(roles => {
+          user.setRoles(roles).then(() => {
             res.send({ message: "User was registered successfully!" });
           });
         });
@@ -67,14 +71,14 @@ exports.signin = (req, res) => {
       });
 
       var authorities = [];
-      user.getRoles().then(role => {
-        for (let i = 0; i < role.length; i++) {
-          authorities.push("ROLE_" + role[i].name.toUpperCase());
+      user.getRoles().then(roles => {
+        for (let i = 0; i < roles.length; i++) {
+          authorities.push("ROLE_" + roles[i].role.toUpperCase());
         }
         res.status(200).send({
           id: user.id,
           email: user.email,
-          role: authorities,
+          roles: authorities,
           accessToken: token
         });
       });
